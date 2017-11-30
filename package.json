@@ -1,0 +1,32 @@
+{
+  "name": "03-asynchronous-callbacks",
+  "version": "1.0.0",
+  "description": "Creating asynchronous callbacks",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest -i --coverage",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerrynordstrom/03-asynchronous-callbacks.git"
+  },
+  "keywords": [
+    "Asynchronous",
+    "Callbacks",
+    "Indexed-Calls"
+  ],
+  "author": "Kerry Nordstrom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kerrynordstrom/03-asynchronous-callbacks/issues"
+  },
+  "homepage": "https://github.com/kerrynordstrom/03-asynchronous-callbacks#readme",
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "jest": "^21.2.1"
+  }
+}

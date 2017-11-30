@@ -1,46 +1,28 @@
-![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 03: Parallel File Processing
-===
-
-## Submission Instructions
-* Work in a fork of this repository
-* Work in a branch on your fork
-* Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
-* Open a pull request to this repository
-* Submit on canvas a question and observation, how long you spent, and a link to your pull request
-
-## Resources  
-  * [fs module docs](https://nodejs.org/api/fs.html)
-
-## Configuration 
-Configure the root of your repository with the following files and directories. Thoughtfully name and organize any aditional configuration or module files.
-* **README.md** - contains documentation
-* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
-* **.eslintrc.json** - contains the course linter configuration
-* **.eslintignore** - contains the course linter ignore configuration
-* **package.json** - contains npm package config
-  * create a `lint` script for running eslint
-  * create a `test` script for running tests
-* **lib/** - contains module definitions
-* **assets/** - contains the text files used by the program
-* **\_\_test\_\_/** - contains unit tests
-
-## Feature Tasks  
-#### Reader Module
-In the lib/ directory create a reader.js module that exports a single function. The reader module should take an array of three file paths and resolve a mapped array of strings loaded from each file using an error-first callback. The string data should be in the same order as the file path data (mapped). If an error occurs it should immediately reject the error using the callback and stop execution.
-
-* The reader module should have the function signature `(paths, callback) => undefined`
-* On a failure the reader module should invoke the callback with an error `callback(error)`
-* On success the reader module should invoke the callback with null as the first parameter, and the result as the second parameter `callback(null, result)`
-
-## Testing  
-#### Reader Module Tests
-* Use TDD `describe` and `test` methods to define descriptive tests
-* Each `test` callback should aim to test a small well defined feature of a function
-* Write tests to ensure the reader function rejects errors with invalid file paths
-* Write tests to ensure the reader function correctly resolves mapped string data for an array of file paths
-
-## Bonus 1pt
-Write the reader function recursively so that it will be able to support 0 or more paths.
-
 ##  Documentation
-In your README.md describe the exported values of each module you have defined. Every function description should include it's arity (expected number of parameters), the expected data for each parameter (data-type and limitations), and it's behavior (for both valid and invalid use). Feel free to write any additional information in your README.md.
+In your README.md describe the exported values of each module you have defined. Every function description should include it's arity (expected number of parameters), the expected data for each parameters (data-type and limitations), and it's behavior (for both valid and invalid use). Feel free to write any additional information in your README.md.
+
+## Bonus 2pts
+* Create a second module fp-curry.js that is a refactored version of fp.js, where each function has curried arguments
+* Create a fp-curry.test.js that is a refactored version of fp.curry.js that tests fp-curry.js
+
+## Reduce function and test
+
+Reduce includes a function that takes in three parameters, a callback to the reduce function, an array, and a starting value.  The expeted data type for each parameter is function, object, and integer.  The array may contain integers or strings and for valid use, this will return a total of each of the integers in the array.  For invalid use, this will return a type error for the function if a callback is not passed.
+
+## Map function and test
+
+Map includes a function that takes in two parameters, a callback to the map function and an array.  The expeted data type for each parameter is function and object.  The array may contain integers and for valid use, return a shallow copy of the original array with each indice doubled.  For invalid use, this will return a type error for the function if a callback is not passed.
+
+##Filter function and test
+
+Filter includes a function that takes in two parameters, a callback to the filter function and an array.  The expeted data type for each parameter is function and object.  The array may contain integers and for valid use, will return the odd numbers.  For invalid use, this will return a type error for the function if a callback is not passed.
+
+##Slice function and test
+
+Slice includes a function that takes in three parameters, the beginning index, ending index, and an array.  The expeted data type for each parameter is an integer, integer and an array.  The array may contain integers and for valid use, it will return a shallow copy of the original array with the first five indices.  For invalid use, this will return a type error for the type error for the array if an object is not passed.
+
+##
+
+##
+
+##

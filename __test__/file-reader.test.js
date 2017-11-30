@@ -10,4 +10,25 @@ describe('file-reader.test.js', () => {
       done();
     });
   });
+
+  test('Each file received must be valid file', done => {
+    fileReader.readFile(['garbage', 'panagram.txt', 'werther.txt'], (error) => {
+      expect(error).not.toBeNull();
+      done();
+    });
+  });
+
+  test('Each file received must be valid file', done => {
+    fileReader.readFile(['kafka.txt', 'garbage', 'werther.txt'], (error) => {
+      expect(error).not.toBeNull();
+      done();
+    });
+  });
+
+  test('Each file received must be valid file', done => {
+    fileReader.readFile(['kafka.txt', 'panagram.txt', 'garbage'], (error) => {
+      expect(error).not.toBeNull();
+      done();
+    });
+  });
 });
