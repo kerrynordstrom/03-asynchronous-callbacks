@@ -1,28 +1,14 @@
-##  Documentation
-In your README.md describe the exported values of each module you have defined. Every function description should include it's arity (expected number of parameters), the expected data for each parameters (data-type and limitations), and it's behavior (for both valid and invalid use). Feel free to write any additional information in your README.md.
+ ##  Documentation
+This app takes in three files and sends the contents of each as a string to a new index in an array.  
 
-## Bonus 2pts
-* Create a second module fp-curry.js that is a refactored version of fp.js, where each function has curried arguments
-* Create a fp-curry.test.js that is a refactored version of fp.curry.js that tests fp-curry.js
+## File Reader Function
 
-## Reduce function and test
+My file reader function takes in two parameters, the paths (array) and a callback (function).  The array must contain strings which are derived from the assets directory, each file contained within is mapped to a variable declared within the reader module.  
 
-Reduce includes a function that takes in three parameters, a callback to the reduce function, an array, and a starting value.  The expeted data type for each parameter is function, object, and integer.  The array may contain integers or strings and for valid use, this will return a total of each of the integers in the array.  For invalid use, this will return a type error for the function if a callback is not passed.
+## File Reader Array Test
 
-## Map function and test
+My file reader test passes in three correct files in the form of an array and shows an error if it were to be null, and the test passes if three text files are passed as expected.
 
-Map includes a function that takes in two parameters, a callback to the map function and an array.  The expeted data type for each parameter is function and object.  The array may contain integers and for valid use, return a shallow copy of the original array with each indice doubled.  For invalid use, this will return a type error for the function if a callback is not passed.
+## File Reader Invalid Array Test
 
-##Filter function and test
-
-Filter includes a function that takes in two parameters, a callback to the filter function and an array.  The expeted data type for each parameter is function and object.  The array may contain integers and for valid use, will return the odd numbers.  For invalid use, this will return a type error for the function if a callback is not passed.
-
-##Slice function and test
-
-Slice includes a function that takes in three parameters, the beginning index, ending index, and an array.  The expeted data type for each parameter is an integer, integer and an array.  The array may contain integers and for valid use, it will return a shallow copy of the original array with the first five indices.  For invalid use, this will return a type error for the type error for the array if an object is not passed.
-
-##
-
-##
-
-##
+My file reader invalid tests look at each index of the array passed to it and determines whether at index 0, 1, or 2 if an invalid text file is passed through.  If it is invalid, it throws an error.
